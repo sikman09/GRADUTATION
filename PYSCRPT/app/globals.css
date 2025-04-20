@@ -1,0 +1,101 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 0 0% 100%; /* White background */
+    --foreground: 60 100% 50%; /* FDF502 - bright yellow */
+    --card: 240 100% 22%;
+    --card-foreground: 60 100% 50%;
+    --popover: 240 100% 18%;
+    --popover-foreground: 60 100% 50%;
+    --primary: 60 100% 50%;
+    --primary-foreground: 240 100% 18%;
+    --secondary: 240 100% 25%;
+    --secondary-foreground: 60 100% 50%;
+    --muted: 240 100% 25%;
+    --muted-foreground: 60 100% 80%;
+    --accent: 60 100% 50%;
+    --accent-foreground: 240 100% 18%;
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 210 40% 98%;
+    --border: 240 100% 30%;
+    --input: 240 100% 30%;
+    --ring: 60 100% 50%;
+    --radius: 0.5rem;
+  }
+
+  .dark {
+    --background: 0 0% 100%; /* White background */
+    --foreground: 60 100% 50%; /* FDF502 - bright yellow */
+    --card: 240 100% 22%;
+    --card-foreground: 60 100% 50%;
+    --popover: 240 100% 18%;
+    --popover-foreground: 60 100% 50%;
+    --primary: 60 100% 50%;
+    --primary-foreground: 240 100% 18%;
+    --secondary: 240 100% 25%;
+    --secondary-foreground: 60 100% 50%;
+    --muted: 240 100% 25%;
+    --muted-foreground: 60 100% 80%;
+    --accent: 60 100% 50%;
+    --accent-foreground: 240 100% 18%;
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 210 40% 98%;
+    --border: 240 100% 30%;
+    --input: 240 100% 30%;
+    --ring: 60 100% 50%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground;
+    background: radial-gradient(circle at center, rgba(255, 192, 203, 0.5) 0%, rgba(255, 255, 255, 1) 70%);
+  }
+}
+
+/* Custom font for Baskerville Old Face */
+@font-face {
+  font-family: "Baskerville Old Face";
+  src: local("Baskerville Old Face");
+  font-weight: normal;
+  font-style: normal;
+}
+
+.font-serif {
+  font-family: "Baskerville Old Face", serif;
+}
+
+.font-sans {
+  font-family: Arial, sans-serif;
+}
+
+.font-mono {
+  font-family: "Courier New", monospace;
+}
+
+.font-georgia {
+  font-family: Georgia, serif;
+}
+
+.font-times {
+  font-family: "Times New Roman", serif;
+}
+
+/* Flash animation */
+@keyframes flash {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+.animate-flash {
+  animation: flash 300ms ease-out;
+}
